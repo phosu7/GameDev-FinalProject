@@ -44,7 +44,7 @@ public class Character : MonoBehaviour
     void Update()
     {
         //Projectile
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || (Input.GetKeyDown(KeyCode.Space)))
         {
             projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }

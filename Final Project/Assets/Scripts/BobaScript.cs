@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.UIElements;
 
 public class BobaScript : MonoBehaviour
@@ -18,5 +19,16 @@ public class BobaScript : MonoBehaviour
         Destroy(gameObject, 3);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 }

@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
 
-    public HealthBar healthbar;
+    [SerializeField] HealthBar healthbar;
 
     // Start is called before the first frame update
     void Start()
@@ -16,18 +16,30 @@ public class PlayerHealth : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
     }
 
+    void Awake()
+    {
+        //healthbar = GetComponent<HealthBar>();
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        /*if (Input.GetKeyDown(KeyCode.F))
         {
             TakeDamage(1);
-        }
+        }*/
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 }

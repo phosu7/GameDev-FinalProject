@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 479770036}
   m_Layer: 0
   m_Name: MainCharacter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,7 +540,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1666,7 +1666,7 @@ GameObject:
   - component: {fileID: 1658983362}
   - component: {fileID: 1658983361}
   - component: {fileID: 1658983360}
-  - component: {fileID: 1658983359}
+  - component: {fileID: 1658983364}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1674,18 +1674,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1658983359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658983358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3531fd358cc836a4287eaf399fb1f0b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &1658983360
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1788,6 +1776,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1658983364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658983358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3531fd358cc836a4287eaf399fb1f0b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1709432079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,7 +1804,7 @@ GameObject:
   - component: {fileID: 1709432084}
   m_Layer: 0
   m_Name: Karen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1962,6 +1962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 1709432084}
+  playerHealth: {fileID: 479770033}
 --- !u!4 &1726654773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9027706324695532152, guid: 81ca4b7226b565a468d719872c6d5d16, type: 3}

@@ -10,6 +10,7 @@ public class RandomSpawner : MonoBehaviour
     private int karenCount = 8;
 
 
+
     void Start()
     {
         SpawnBoba();
@@ -27,7 +28,7 @@ public class RandomSpawner : MonoBehaviour
             while (true)
             {
                 yield return new WaitForSeconds(2f);
-                GameObject newBoba = Instantiate(floorBobaPrefab, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                GameObject newBoba = Instantiate(floorBobaPrefab, new Vector3(Random.Range(-8, 6), Random.Range(-4, 3), 0), Quaternion.identity);
 
             }
             yield return null;
@@ -48,6 +49,10 @@ public class RandomSpawner : MonoBehaviour
                 GameObject newKaren = Instantiate(karenPrefab, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
                 --karenCount;
             }
+
+
+
+
             yield return null;
 
         }

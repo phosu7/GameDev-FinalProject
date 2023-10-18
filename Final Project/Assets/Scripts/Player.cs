@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] float speed = 5f;
     Rigidbody2D rb;
 
+
     //Dash
     public bool canDash = true;
     public bool isDashing;
@@ -22,10 +23,19 @@ public class Player : MonoBehaviour
     private float dashingCooldown = 0.5f;
     [SerializeField] private TrailRenderer tr;
 
+    public int karenDeaths;
+
+
+
     void Awake()
     {
         projectileThrower = GetComponent<ProjectileThrower>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
+        karenDeaths = 0;
     }
 
     // Update is called once per frame
@@ -122,5 +132,18 @@ public class Player : MonoBehaviour
 
         }
     }
+
+    public void karenCounter(int karen)
+    {
+        karenDeaths += karen;
+
+        if (karenDeaths >= 5)
+        {
+            Debug.Log("Vicotry");
+
+        }
+
+    }
+
 
 }

@@ -21,7 +21,7 @@ public class ProjectileThrower : MonoBehaviour
             Vector3 direction = (targetPosition - transform.position).normalized;
 
             projectileRB.velocity = direction * pSpeed;
-
+            GetComponent<AudioSource>().Play();
             currentBoba -= 1;
 
         }

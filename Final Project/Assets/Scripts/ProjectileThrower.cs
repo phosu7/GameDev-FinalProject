@@ -8,7 +8,7 @@ public class ProjectileThrower : MonoBehaviour
 
     //ammo
     public int currentBoba;
-    public int ammoSize = 1;
+    public int ammoSize = 5;
 
 
     public void Throw(Vector3 targetPosition)

@@ -13,6 +13,8 @@ public class enemyScript : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
 
+    
+
 
     void Awake()
     {

@@ -12,7 +12,8 @@ public class BobaPickup : MonoBehaviour
 
         if (projectileThrower)
         {
-            AudioSource.PlayClipAtPoint(ammo, transform.position);
+            GetComponent<AudioSource>().PlayOneShot(ammo);
+            //AudioSource.PlayClipAtPoint(ammo, transform.position);
             projectileThrower.AddBoba(projectileThrower.ammoSize);
 
             Destroy(gameObject);

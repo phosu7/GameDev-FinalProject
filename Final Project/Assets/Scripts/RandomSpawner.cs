@@ -5,11 +5,15 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour
 {
     [SerializeField] GameObject floorBobaPrefab;
+    [SerializeField] GameObject karenPrefab;
+
+    private int karenCount = 8;
 
 
     void Start()
     {
         SpawnBoba();
+        SpawnKaren();
 
     }
 
@@ -29,6 +33,24 @@ public class RandomSpawner : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    void SpawnKaren()
+    {
+        StartCoroutine(SpawnKarenRoutine());
+
+        IEnumerator SpawnKarenRoutine()
+        {
+
+            while (karenCount >= 0)
+            {
+                yield return new WaitForSeconds(5f);
+                GameObject newKaren = Instantiate(karenPrefab, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                --karenCount;
+            }
+            yield return null;
+
+        }
     }
 
 }

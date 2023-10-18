@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
+
     public int maxHealth = 5;
     public int currentHealth;
+
+
 
     [SerializeField] HealthBar healthbar;
 
@@ -18,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake()
     {
-        //healthbar = GetComponent<HealthBar>();
+        healthbar = GetComponent<HealthBar>();
 
     }
 
@@ -39,6 +44,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
+
+            //Display GameOver
+
 
         }
     }

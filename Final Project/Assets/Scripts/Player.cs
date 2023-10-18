@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     ProjectileThrower projectileThrower;
     //[SerializeField] PlayerMovement playerMovement;
     Vector2 moveDirection;
+    Vector2 mousePosition;
     [SerializeField] float speed = 5f;
     Rigidbody2D rb;
 
@@ -53,6 +55,10 @@ public class Player : MonoBehaviour
         }
         MovementRB(vel);
 
+        //Player moving with mouse
+        Vector2 aimDirection = mousePosition - rb.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = aimAngle;
 
     }
 
@@ -60,6 +66,9 @@ public class Player : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+        //Player mouse movement
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         //So player doesn't move while dashing
         if (isDashing)

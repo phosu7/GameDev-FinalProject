@@ -1,23 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class ProjectileThrower : MonoBehaviour
 {
-    [SerializeField] float pSpeed = 5f;
+    [SerializeField] float pSpeed = 10f;
     public GameObject projectilePrefab;
+    public Transform firePoint;
+
+    //ammo
+    public int currentBoba;
+    public int ammoSize = 1;
+
+
     public void Throw(Vector3 targetPosition)
     {
-        Rigidbody2D projectileRB = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>();
-        targetPosition.z = 0;
-        Vector3 direction = (targetPosition - transform.position).normalized;
+        if (currentBoba > 0)
+        {
 
-        projectileRB.velocity = direction * pSpeed;
+            Rigidbody2D projectileRB = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation).GetComponent<Rigidbody2D>();
+            targetPosition.z = 0;
+            Vector3 direction = (targetPosition - transform.position).normalized;
 
-        // Destroy(p, 3f);
+            projectileRB.velocity = direction * pSpeed;
 
+            currentBoba -= 1;
 
+        }
+    }
+
+    public void AddBoba(int bobaAmount)
+    {
+        currentBoba += bobaAmount;
 
     }
 }

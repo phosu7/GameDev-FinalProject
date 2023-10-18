@@ -24,6 +24,6 @@ public class BobaCount : MonoBehaviour
 
     public void UpdateBobaCount()
     {
-        bobaCount.text = $"Boba: {boba.currentBoba}";
+        bobaCount.text = $"Boba: {boba.currentBoba} ";
     }
 }

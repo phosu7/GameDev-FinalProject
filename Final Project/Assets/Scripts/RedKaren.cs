@@ -35,6 +35,7 @@ public class RedKaren : MonoBehaviour
         {
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle = Mathf.Clamp(angle, -0f, 0f);
             rb.rotation = angle;
             moveDirection = direction;
         }

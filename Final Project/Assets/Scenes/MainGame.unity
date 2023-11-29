@@ -2770,6 +2770,10 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049769858253741994, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3460812041219172792, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

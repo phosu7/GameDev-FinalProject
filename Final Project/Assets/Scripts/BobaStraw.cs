@@ -14,7 +14,7 @@ public class BobaStraw : MonoBehaviour
     //accessing the bobaStraw
     private SpriteRenderer bobaStrawSR;
 
-    private int index = 0;
+    private int index = 1;
 
     void Awake()
     {
@@ -38,7 +38,7 @@ public class BobaStraw : MonoBehaviour
         {
             if (index >= 4)
             {
-                index = 0;
+                index = 1;
             }
             SetStraw(index);
             index++;

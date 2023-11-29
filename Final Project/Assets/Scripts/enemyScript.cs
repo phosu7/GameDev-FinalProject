@@ -21,6 +21,15 @@ public class enemyScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         //playerHealth = GetComponent<PlayerHealth>();
+        if (this.tag == "RedKaren")
+        {
+            moveSpeed = 4f;
+        }
+
+        if (this.tag == "BlueKaren")
+        {
+            moveSpeed = 0.75f;
+        }
 
     }
 

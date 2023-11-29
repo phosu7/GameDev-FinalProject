@@ -118,10 +118,10 @@ GameObject:
   - component: {fileID: 669696908659556432}
   - component: {fileID: 9049967351112957066}
   - component: {fileID: -3932366783846638542}
-  - component: {fileID: -735077519976148715}
+  - component: {fileID: 1205792906835624486}
   m_Layer: 0
   m_Name: BlueKaren
-  m_TagString: Untagged
+  m_TagString: BlueKaren
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.39, y: -2.052, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0253, y: 1.7578, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6715766138026507977}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f900afb1ebae20f47af3e97c30ab1604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 8
   currentHealth: 0
   floatingHB: {fileID: 8204961419337997203}
 --- !u!50 &9049967351112957066
@@ -224,7 +224,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -281,7 +281,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-735077519976148715
+--- !u!114 &1205792906835624486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,11 +290,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2376821865857049950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e685ff620c60a3408ff4432141047d6, type: 3}
+  m_Script: {fileID: 11500000, guid: e2c9aaaca614cb04aa43b59882156e4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 0}
-  moveSpeed: 0.5
+  enemyHealth: {fileID: 669696908659556432}
+  moveSpeed: 2
 --- !u!1 &3203271569253040791
 GameObject:
   m_ObjectHideFlags: 0

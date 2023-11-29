@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5802539112716708646}
-  camera: {fileID: 2543604662948090517, guid: d63981f5238e0664f879d59390c4a9f9, type: 3}
   target: {fileID: 5708470109912861205}
   offset: {x: 0, y: 1, z: 0}
 --- !u!1 &5031049884268145553
@@ -330,9 +329,9 @@ GameObject:
   - component: {fileID: 5708470109912861205}
   - component: {fileID: 2589405739045126799}
   - component: {fileID: 1745784062096280616}
-  - component: {fileID: 6485060729468613281}
   - component: {fileID: 870724937338981073}
   - component: {fileID: 4499672734603787030}
+  - component: {fileID: 4583499795622298605}
   m_Layer: 0
   m_Name: Karen
   m_TagString: Enemy
@@ -453,21 +452,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6485060729468613281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6895162564210400077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2c9aaaca614cb04aa43b59882156e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 870724937338981073}
-  playerHealth: {fileID: -661938706718367363, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
-  moveSpeed: 2
 --- !u!114 &870724937338981073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,9 +464,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f900afb1ebae20f47af3e97c30ab1604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  currentHealth: 10
-  karenCount: 0
+  maxHealth: 8
+  currentHealth: 8
   floatingHB: {fileID: 7522363968218678843}
 --- !u!50 &4499672734603787030
 Rigidbody2D:
@@ -511,6 +494,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4583499795622298605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895162564210400077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c9aaaca614cb04aa43b59882156e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 870724937338981073}
+  playerHealth: {fileID: 0}
+  moveSpeed: 2
 --- !u!1 &7109959326157578814
 GameObject:
   m_ObjectHideFlags: 0

@@ -206,6 +206,7 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   tr: {fileID: 7091072558875460687}
+  karenDeaths: 0
 --- !u!50 &1854081055774853826
 Rigidbody2D:
   serializedVersion: 4
@@ -424,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
+  currentHealth: 5
   healthbar: {fileID: 1638545284043293274, guid: 482e75922a19cab44a2d02f69be50461, type: 3}
 --- !u!1 &7198404093959233568
 GameObject:

@@ -18,10 +18,10 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
 
-    public GameObject plank;
+
 
     public static int count = 0;
-    public static int goal = 4;
+    public static int goal = 11;
 
     //singleton: can delete
     //public static EnemyHealth instance;
@@ -92,7 +92,7 @@ public class EnemyHealth : MonoBehaviour
             if (count == goal)
             {
                 Debug.Log("PLANK");
-                Destroy(plank);
+
 
             }
             Destroy(gameObject);

@@ -5,15 +5,14 @@ using UnityEngine;
 public class enemyScript : MonoBehaviour
 {
     [SerializeField] EnemyHealth enemyHealth;
-    [SerializeField] PlayerHealth playerHealth;
+    // [SerializeField] PlayerHealth playerHealth;
+    //public PlayerHealth playerHealth;
 
     //Follow target
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float moveSpeed = 2f;
     Rigidbody2D rb;
     Transform target;
     Vector2 moveDirection;
-
-
 
 
     void Awake()
@@ -21,6 +20,7 @@ public class enemyScript : MonoBehaviour
         //enemyHealth = GetComponent<EnemyHealth>();
         rb = GetComponent<Rigidbody2D>();
         //playerHealth = GetComponent<PlayerHealth>();
+
     }
 
     void Start()
@@ -52,7 +52,7 @@ public class enemyScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         if (other.tag == "Boba")
         {

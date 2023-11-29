@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class KarenCount : MonoBehaviour
@@ -24,6 +25,7 @@ public class KarenCount : MonoBehaviour
 
     public void UpdateKarenDeaths()
     {
+        // int currentScore = EnemyHealth.instance.GetScore();
         karenCount.text = $"Karens: {EnemyHealth.count} ";
     }
 }

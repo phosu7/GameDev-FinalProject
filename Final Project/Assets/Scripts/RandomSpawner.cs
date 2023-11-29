@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
+    public EnemyHealth enemyHealth;
     [SerializeField] GameObject floorBobaPrefab;
     [SerializeField] GameObject karenPrefab;
 
-    private int karenCount = 8;
+    // private int karenCount = 11;
+    private int spawnGoal = EnemyHealth.goal;
 
+    void Awake()
+    {
+        enemyHealth = GetComponent<EnemyHealth>();
 
+    }
 
     void Start()
     {
@@ -43,11 +50,11 @@ public class RandomSpawner : MonoBehaviour
         IEnumerator SpawnKarenRoutine()
         {
 
-            while (karenCount >= 0)
+            while ((spawnGoal - 4) >= 0)
             {
                 yield return new WaitForSeconds(5f);
                 GameObject newKaren = Instantiate(karenPrefab, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
-                --karenCount;
+                --spawnGoal;
             }
 
 

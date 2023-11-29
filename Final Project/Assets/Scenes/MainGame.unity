@@ -360,11 +360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5708470109912861205, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.84
+      value: -64.35
       objectReference: {fileID: 0}
     - target: {fileID: 5708470109912861205, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 48.09
+      value: 83.01
       objectReference: {fileID: 0}
     - target: {fileID: 5708470109912861205, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2815,6 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37351f494eb33b244be2dc63a79fdca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
   floorBobaPrefab: {fileID: 965267673933025056, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
   karenPrefab: {fileID: 1617573399}
 --- !u!4 &1860998118

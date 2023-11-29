@@ -7,6 +7,7 @@ public class MainMenuHandler : MonoBehaviour
 {
     public void PlayGame()
     {
+        EnemyHealth.count = 0;
         SceneManager.LoadScene("MainGame");
 
 

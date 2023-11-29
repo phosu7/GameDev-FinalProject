@@ -60,10 +60,21 @@ public class enemyScript : MonoBehaviour
             Destroy(other.gameObject);
 
         }
+        else if (other.tag == "BlueBoba")
+        {
+            enemyHealth.TakeDamage(0.5f);
+            moveSpeed = 1;
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "RedBoba")
+        {
+            enemyHealth.TakeDamage(4f);
+            Destroy(other.gameObject);
+        }
 
         if (other.tag == "Player")
         {
-            playerHealth.TakeDamage(1);
+            playerHealth.TakeDamage(2);
         }
 
     }

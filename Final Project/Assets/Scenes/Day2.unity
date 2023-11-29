@@ -379,6 +379,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &935591549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6986938282813580304, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
+  m_PrefabInstance: {fileID: 2011275431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &935591550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935591549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3248b45cbd1034da4720197af5646c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobaPrefab1: {fileID: 7650344606134399227, guid: 8a7bd7d174ed3984a8eb75c7a7beb8f2, type: 3}
+  bobaPrefab2: {fileID: 1035272012789515264, guid: 7b2d2f5199092284b9a3ec5a51451474, type: 3}
+  bobaPrefab3: {fileID: 5008456597757203243, guid: f76badddfa9329044b9886a3345de173, type: 3}
 --- !u!1001 &976072743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -833,10 +853,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2508372723285773137, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6986938282813580304, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 935591550}
   m_SourcePrefab: {fileID: 100100000, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
 --- !u!1 &2031514426
 GameObject:

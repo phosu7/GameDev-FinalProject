@@ -10,6 +10,10 @@ public class ProjectileThrower : MonoBehaviour
     public int currentBoba;
     public int ammoSize = 5;
 
+    public void SetPrefab(GameObject newPrefab)
+    {
+        projectilePrefab = newPrefab;
+    }
 
     public void Throw(Vector3 targetPosition, int damage)
     {
@@ -25,10 +29,30 @@ public class ProjectileThrower : MonoBehaviour
 
                 projectileRB.velocity = direction * pSpeed;
                 GetComponent<AudioSource>().Play();
-                currentBoba -= damage;
+                currentBoba--;
 
 
 
+            }
+            else if (boba.CompareTag("BlueBoba"))
+            {
+                Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
+                targetPosition.z = 0;
+                Vector3 direction = (targetPosition - transform.position).normalized;
+
+                projectileRB.velocity = direction * 6;
+                GetComponent<AudioSource>().Play();
+                currentBoba--;
+            }
+            else if (boba.CompareTag("RedBoba"))
+            {
+                Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
+                targetPosition.z = 0;
+                Vector3 direction = (targetPosition - transform.position).normalized;
+
+                projectileRB.velocity = direction * pSpeed;
+                GetComponent<AudioSource>().Play();
+                currentBoba--;
             }
         }
         else

@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
     private float dashingCooldown = 0.5f;
     [SerializeField] private TrailRenderer tr;
 
+
+
     public int karenDeaths;
 
 

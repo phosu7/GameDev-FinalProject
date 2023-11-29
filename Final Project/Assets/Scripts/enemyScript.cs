@@ -19,6 +19,7 @@ public class enemyScript : MonoBehaviour
     {
         //enemyHealth = GetComponent<EnemyHealth>();
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
         //playerHealth = GetComponent<PlayerHealth>();
 
     }
@@ -34,8 +35,11 @@ public class enemyScript : MonoBehaviour
         {
             Vector3 direction = (target.position - transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            angle = Mathf.Clamp(angle, -0f, 0f);
             rb.rotation = angle;
             moveDirection = direction;
+
+
         }
 
     }
@@ -74,7 +78,7 @@ public class enemyScript : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            playerHealth.TakeDamage(2);
+            playerHealth.TakeDamage(1);
         }
 
     }

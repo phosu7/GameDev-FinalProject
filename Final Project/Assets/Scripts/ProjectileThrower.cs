@@ -7,7 +7,7 @@ public class ProjectileThrower : MonoBehaviour
     public Transform firePoint;
 
     //ammo
-    public int currentBoba;
+    public int currentBoba = 0;
     public int ammoSize = 5;
 
     public void SetPrefab(GameObject newPrefab)

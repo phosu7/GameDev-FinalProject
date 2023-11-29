@@ -11,6 +11,9 @@ public class BobaStraw : MonoBehaviour
     //reference to projectileThrower script
     ProjectileThrower projectileThrower;
 
+    //accessing the bobaStraw
+    private SpriteRenderer bobaStrawSR;
+
     private int index = 0;
 
     void Awake()
@@ -20,7 +23,12 @@ public class BobaStraw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject bobaStraw = GameObject.FindWithTag("BobaStraw");
 
+        if (bobaStraw != null)
+        {
+            bobaStrawSR = bobaStraw.GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
@@ -44,15 +52,23 @@ public class BobaStraw : MonoBehaviour
             case 1:
                 //call throw method in projectileThrow
                 projectileThrower.SetPrefab(bobaPrefab1);
+                ChangeStraw(Color.black);
                 break;
             case 2:
                 //call throw method in projectileThrow
                 projectileThrower.SetPrefab(bobaPrefab2);
+                ChangeStraw(Color.blue);
                 break;
             case 3:
                 //call throw method in projectileThrow
                 projectileThrower.SetPrefab(bobaPrefab3);
+                ChangeStraw(Color.red);
                 break;
         }
+    }
+
+    void ChangeStraw(Color c)
+    {
+        bobaStrawSR.color = c;
     }
 }

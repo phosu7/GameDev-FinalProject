@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7727230781130303627}
   - component: {fileID: 2435791914136938072}
-  - component: {fileID: 2508372723285773137}
   m_Layer: 0
   m_Name: BobaStraw
-  m_TagString: Untagged
+  m_TagString: BobaStraw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,18 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2508372723285773137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214388255315916553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df3248b45cbd1034da4720197af5646c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6986938282813580304
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +103,7 @@ GameObject:
   - component: {fileID: 5680905459261548653}
   - component: {fileID: -661938706718367363}
   - component: {fileID: 2035233936383425746}
+  - component: {fileID: 5184550411689528426}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -524,6 +512,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5184550411689528426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986938282813580304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3248b45cbd1034da4720197af5646c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobaPrefab1: {fileID: 7650344606134399227, guid: 8a7bd7d174ed3984a8eb75c7a7beb8f2, type: 3}
+  bobaPrefab2: {fileID: 1035272012789515264, guid: 7b2d2f5199092284b9a3ec5a51451474, type: 3}
+  bobaPrefab3: {fileID: 5008456597757203243, guid: f76badddfa9329044b9886a3345de173, type: 3}
 --- !u!1 &7198404093959233568
 GameObject:
   m_ObjectHideFlags: 0

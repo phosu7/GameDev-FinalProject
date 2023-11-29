@@ -12,6 +12,10 @@ public class capsule : MonoBehaviour
         //Destroy(this.gameObject);
         //GetComponent<SpriteRenderer>().color = Color.black;
         //Display Victory
-        OnVictory?.Invoke();
+        if (other.tag == "Player")
+        {
+            OnVictory?.Invoke();
+        }
     }
+
 }

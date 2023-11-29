@@ -7,6 +7,8 @@ TagManager:
   - Boba
   - Enemy
   - Plank
+  - BlueBoba
+  - RedBoba
   layers:
   - Default
   - TransparentFX

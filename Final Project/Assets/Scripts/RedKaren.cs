@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyScript : MonoBehaviour
+public class RedKaren : MonoBehaviour
 {
+
     [SerializeField] EnemyHealth enemyHealth;
     // [SerializeField] PlayerHealth playerHealth;
     //public PlayerHealth playerHealth;
 
     //Follow target
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float moveSpeed = 4f;
     Rigidbody2D rb;
     Transform target;
     Vector2 moveDirection;
@@ -56,7 +57,7 @@ public class enemyScript : MonoBehaviour
 
         if (other.tag == "Boba")
         {
-            enemyHealth.TakeDamage(1f);
+            enemyHealth.TakeDamage(2f);
             Destroy(other.gameObject);
 
         }
@@ -67,6 +68,4 @@ public class enemyScript : MonoBehaviour
         }
 
     }
-
-
 }

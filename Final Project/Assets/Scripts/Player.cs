@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         //Projectile
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            projectileThrower.Throw(Camera.main.ScreenToWorldPoint(Input.mousePosition), 1);
         }
 
         //Dash

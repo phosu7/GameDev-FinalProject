@@ -116,11 +116,11 @@ GameObject:
   - component: {fileID: 7781554877425710980}
   - component: {fileID: 8953228420000725900}
   - component: {fileID: 669696908659556432}
-  - component: {fileID: 438940747813129518}
   - component: {fileID: 9049967351112957066}
   - component: {fileID: -3932366783846638542}
+  - component: {fileID: -735077519976148715}
   m_Layer: 0
-  m_Name: KarenTest
+  m_Name: BlueKaren
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +184,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.028301895, g: 0.003070489, b: 0.003070489, a: 1}
+  m_Color: {r: 0.15419187, g: 0.87300146, b: 0.9339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -208,23 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  plank: {fileID: 0}
   floatingHB: {fileID: 8204961419337997203}
---- !u!114 &438940747813129518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2376821865857049950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2c9aaaca614cb04aa43b59882156e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 669696908659556432}
-  playerHealth: {fileID: -661938706718367363, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
-  moveSpeed: 2
 --- !u!50 &9049967351112957066
 Rigidbody2D:
   serializedVersion: 4
@@ -297,6 +281,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-735077519976148715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376821865857049950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e685ff620c60a3408ff4432141047d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 0}
+  moveSpeed: 0.5
 --- !u!1 &3203271569253040791
 GameObject:
   m_ObjectHideFlags: 0

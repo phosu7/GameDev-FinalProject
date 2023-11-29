@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEditor.UI;
 
@@ -15,8 +16,8 @@ using UnityEngine.UIElements;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 5;
-    public int currentHealth;
+    public int maxHealth = 8;
+    public float currentHealth;
 
 
 
@@ -77,7 +78,7 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         floatingHB.UpdateHealthBar(currentHealth, maxHealth);
@@ -99,10 +100,14 @@ public class EnemyHealth : MonoBehaviour
 
         }
 
+    }
 
-
+    public void BlueTakeDama(int damage)
+    {
+        maxHealth = 10;
 
     }
+
 
     /* public int GetScore()
      {

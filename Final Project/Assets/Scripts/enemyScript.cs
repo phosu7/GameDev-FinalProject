@@ -85,10 +85,19 @@ public class enemyScript : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.tag == "Player")
+        if (other.tag == "Player" && this.tag == "Enemy")
         {
-            playerHealth.TakeDamage(1);
+            playerHealth.TakeDamage(1f);
         }
+        else if (other.tag == "Player" && this.tag == "BlueKaren")
+        {
+            playerHealth.TakeDamage(2f);
+        }
+        else if (other.tag == "Player" && this.tag == "RedKaren")
+        {
+            playerHealth.TakeDamage(0.5f);
+        }
+
 
     }
 

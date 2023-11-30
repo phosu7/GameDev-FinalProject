@@ -14,7 +14,6 @@ public class DayTracker : MonoBehaviour
     //getting sceneIndex and updating it
     Scene currentLevel;
     // string sceneName;
-    public int levelIndex;
 
     //singleton
     private static DayTracker _instance;
@@ -37,6 +36,7 @@ public class DayTracker : MonoBehaviour
         }
     }
 
+    public int levelIndex;
     /*void Awake()
     {
         if (instance == null)

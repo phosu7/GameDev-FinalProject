@@ -14,6 +14,9 @@ public class BobaStraw : MonoBehaviour
     //accessing the bobaStraw
     private SpriteRenderer bobaStrawSR;
 
+    //sinlgeton
+    int levelIndex;
+
     private int index = 1;
 
     void Awake()
@@ -23,6 +26,9 @@ public class BobaStraw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //singleton
+        levelIndex = DayTracker.Instance.levelIndex;
+
         GameObject bobaStraw = GameObject.FindWithTag("BobaStraw");
 
         if (bobaStraw != null)
@@ -34,14 +40,48 @@ public class BobaStraw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (levelIndex == 1)
         {
-            if (index >= 4)
-            {
-                index = 1;
-            }
+            index = 1;
             SetStraw(index);
-            index++;
+        }
+
+        else if (levelIndex == 2)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                if (index >= 3)
+                {
+                    index = 1;
+                }
+                SetStraw(index);
+                index++;
+            }
+        }
+        else if (levelIndex == 3)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                if (index == 2 || index >= 4)
+                {
+                    index = 1;
+                }
+                SetStraw(index);
+                index++;
+            }
+        }
+
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                if (index >= 4)
+                {
+                    index = 1;
+                }
+                SetStraw(index);
+                index++;
+            }
         }
     }
 

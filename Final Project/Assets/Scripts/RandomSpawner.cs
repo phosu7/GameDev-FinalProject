@@ -27,7 +27,7 @@ public class RandomSpawner : MonoBehaviour
     {
 
         levelIndex = DayTracker.Instance.levelIndex;
-        Debug.Log(levelIndex);
+        Debug.Log("level index: " + levelIndex);
 
         SpawnBoba();
         SpawnKaren();

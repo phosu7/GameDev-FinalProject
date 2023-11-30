@@ -503,11 +503,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.11
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.57
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -957,11 +957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8531394
+      value: -8.34
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6080053
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6251378133100991322, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1066,7 +1066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7360379b48ed14c8e0ae786ed28e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boba: {fileID: 1274420129}
 --- !u!114 &1257676187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,17 +1110,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257676184}
   m_CullTransparentMesh: 1
---- !u!114 &1274420129 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9109658221963374702, guid: 76c3a72808524804cbed770daa2460b3, type: 3}
-  m_PrefabInstance: {fileID: 2011275431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec2fd4e50e8784f4281ff74b5ede9469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1501325052
 GameObject:
   m_ObjectHideFlags: 0

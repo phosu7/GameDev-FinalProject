@@ -54,20 +54,20 @@ public class BobaStraw : MonoBehaviour
             }
             if (bobaStrawSR.color == (Color.black) && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentBlueBoba > 0)
             {
-                Debug.Log("THis should be called 1");
+                //Debug.Log("THis should be called 1");
                 projectileThrower.SetPrefab(bobaPrefab2);
                 ChangeStraw(Color.blue);
             }
             if (bobaStrawSR.color == (Color.blue) && ProjectileThrower.currentBlueBoba <= 0 && ProjectileThrower.currentBlackBoba > 0)
             {
-                Debug.Log("THis should be called 2");
+                //Debug.Log("THis should be called 2");
                 projectileThrower.SetPrefab(bobaPrefab1);
                 ChangeStraw(Color.black);
             }
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                Debug.Log("index = " + index);
+                //Debug.Log("index = " + index);
                 SetStraw(index);
                 index++;
             }
@@ -125,18 +125,6 @@ public class BobaStraw : MonoBehaviour
                 //call throw method in projectileThrow
                 if (ProjectileThrower.currentRedBoba <= 0)
                 {
-                    if (ProjectileThrower.currentBlackBoba > 0)
-                    {
-                        projectileThrower.SetPrefab(bobaPrefab1);
-                        ChangeStraw(Color.black);
-                        break;
-                    }
-                    else if (ProjectileThrower.currentBlueBoba > 0)
-                    {
-                        projectileThrower.SetPrefab(bobaPrefab3);
-                        ChangeStraw(Color.red);
-                        break;
-                    }
                     break;
                 }
 

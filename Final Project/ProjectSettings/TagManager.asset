@@ -12,6 +12,9 @@ TagManager:
   - BobaStraw
   - RedKaren
   - BlueKaren
+  - FloorBoba
+  - FloorBlueBoba
+  - FloorRedBoba
   layers:
   - Default
   - TransparentFX

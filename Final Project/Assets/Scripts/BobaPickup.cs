@@ -30,9 +30,20 @@ public class BobaPickup : MonoBehaviour
                 projectileThrower.AddBoba(0, 0, 1);
             }
             // projectileThrower.AddBoba(projectileThrower.ammoSize, 0, 0);
-            Debug.Log("i picked up boba");
-            if (other.tag != "Boba" || other.tag != "BlueBoba" || other.tag != "RedBoba")
+            //Debug.Log("i picked up boba");
+            if (other.tag == "Player")
+            {
+                Debug.Log("collided with boba!");
                 Destroy(gameObject);
+
+            }
+
+            else
+            {
+                Debug.Log("i picked up boba: " + other.tag);
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
+            }
+
         }
 
     }

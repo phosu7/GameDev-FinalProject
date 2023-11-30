@@ -26,13 +26,14 @@ public class VictoryManager : MonoBehaviour
 
     public void MainMenu()
     {
+        EnemyHealth.count = 0;
         SceneManager.LoadScene("MainMenu");
 
     }
 
-    public void NextLevel()
+    public void NextLevelDay2()
     {
-        SceneManager.LoadScene("Day2", LoadSceneMode.Single);
+        SceneManager.LoadScene("Day2");
         DayTracker.Instance.ResetData();
     }
 }

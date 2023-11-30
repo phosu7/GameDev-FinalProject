@@ -53,7 +53,8 @@ public class RandomSpawner : MonoBehaviour
             }
             else if (DayTracker.dayCounter == 2)
             {
-                while (true)
+                GameObject gameObjectPlank = GameObject.FindWithTag("Plank");
+                while (gameObjectPlank != null)
                 {
                     yield return new WaitForSeconds(1f);
                     GameObject newBoba = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(-9.5f, -2.5f), Random.Range(-4.5f, 3.5f), 0), Quaternion.identity);
@@ -92,7 +93,7 @@ public class RandomSpawner : MonoBehaviour
             }
             else if (DayTracker.dayCounter == 2)
             {
-                while (karenCount <= EnemyHealth.goal)
+                while (karenCount < EnemyHealth.goal)
                 {
                     yield return new WaitForSeconds(2f);
                     GameObject newKaren = Instantiate(karenPrefab1, new Vector3(Random.Range(-10.9f, -10.4f), Random.Range(-4.7f, 3.15f), 0), Quaternion.identity);

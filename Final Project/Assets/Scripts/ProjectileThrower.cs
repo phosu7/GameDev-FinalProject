@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.WSA;
+//using UnityEngine.WSA;
 
 public class ProjectileThrower : MonoBehaviour
 {

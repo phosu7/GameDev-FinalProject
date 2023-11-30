@@ -37,7 +37,8 @@ public class enemyScript : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+        if (GameObject.FindWithTag("Player") != null)
+            target = GameObject.Find("Player").transform;
     }
 
     void Update()
@@ -68,38 +69,43 @@ public class enemyScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        GameObject gameObjectPlayer = GameObject.FindGameObjectWithTag("Player");
+        if (gameObjectPlayer != null)
+        {
+            PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
 
-        if (other.tag == "Boba")
-        {
-            enemyHealth.TakeDamage(1f);
-            Destroy(other.gameObject);
 
-        }
-        else if (other.tag == "BlueBoba")
-        {
-            enemyHealth.TakeDamage(0.5f);
-            moveSpeed = 1;
-            Destroy(other.gameObject);
-        }
-        else if (other.tag == "RedBoba")
-        {
-            enemyHealth.TakeDamage(4f);
-            Destroy(other.gameObject);
-        }
+            if (other.tag == "Boba")
+            {
+                enemyHealth.TakeDamage(1f);
+                Destroy(other.gameObject);
 
-        if (other.tag == "Player" && this.tag == "Enemy")
-        {
-            playerHealth.TakeDamage(1f);
-        }
-        else if (other.tag == "Player" && this.tag == "BlueKaren")
-        {
-            playerHealth.TakeDamage(0.5f);
-        }
-        else if (other.tag == "Player" && this.tag == "RedKaren")
-        {
-            playerHealth.TakeDamage(2f);
+            }
+            else if (other.tag == "BlueBoba")
+            {
+                enemyHealth.TakeDamage(0.5f);
+                moveSpeed = 1;
+                Destroy(other.gameObject);
+            }
+            else if (other.tag == "RedBoba")
+            {
+                enemyHealth.TakeDamage(4f);
+                Destroy(other.gameObject);
+            }
+
+            if (other.tag == "Player" && this.tag == "Enemy")
+            {
+                playerHealth.TakeDamage(1f);
+            }
+            else if (other.tag == "Player" && this.tag == "BlueKaren")
+            {
+                playerHealth.TakeDamage(0.5f);
+            }
+            else if (other.tag == "Player" && this.tag == "RedKaren")
+            {
+                playerHealth.TakeDamage(2f);
+            }
         }
 
 

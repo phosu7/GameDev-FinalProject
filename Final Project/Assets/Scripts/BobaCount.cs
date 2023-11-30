@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BobaCount : MonoBehaviour
 {
     Text bobaCount;
-    public ProjectileThrower boba;
+    //public ProjectileThrower boba;
 
     int levelIndex;
 
@@ -30,11 +30,11 @@ public class BobaCount : MonoBehaviour
     {
         if (DayTracker.dayCounter == 1)
         {
-            bobaCount.text = $"Boba: {boba.currentBoba}";
+            bobaCount.text = $"Boba: {ProjectileThrower.currentBlackBoba}";
         }
         else if (DayTracker.dayCounter == 2)
         {
-            bobaCount.text = $"Boba: {boba.currentBoba} \nSnow Boba: 0";
+            bobaCount.text = $"Boba: {ProjectileThrower.currentBlackBoba} \nSnow Boba: {ProjectileThrower.currentBlueBoba}";
         }
 
     }

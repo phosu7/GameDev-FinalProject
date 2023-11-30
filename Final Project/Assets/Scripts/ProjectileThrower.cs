@@ -1,4 +1,7 @@
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.WSA;
 
 public class ProjectileThrower : MonoBehaviour
 {
@@ -7,64 +10,90 @@ public class ProjectileThrower : MonoBehaviour
     public Transform firePoint;
 
     //ammo
-    public int currentBoba = 0;
+    public static int currentBlackBoba = 0;
+    public static int currentBlueBoba = 0;
+    public static int currentRedBoba = 0;
+
+    public int totalBoba = 0;
+
     public int ammoSize = 5;
+
+    void Update()
+    {
+        totalBoba = currentBlackBoba + currentBlueBoba + currentRedBoba;
+    }
 
     public void SetPrefab(GameObject newPrefab)
     {
         projectilePrefab = newPrefab;
+
+
     }
 
     public void Throw(Vector3 targetPosition, int damage)
     {
-        if (currentBoba > 0)
+
+        if (totalBoba > 0)
         {
             GameObject boba = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
-            if (boba.CompareTag("Boba"))
+            if (currentBlackBoba > 0)
             {
-                Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
-                targetPosition.z = 0;
-                Vector3 direction = (targetPosition - transform.position).normalized;
+                if (boba.CompareTag("Boba"))
+                {
+                    Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
+                    targetPosition.z = 0;
+                    Vector3 direction = (targetPosition - transform.position).normalized;
 
-                projectileRB.velocity = direction * pSpeed;
-                GetComponent<AudioSource>().Play();
-                currentBoba--;
-
-
-
+                    projectileRB.velocity = direction * pSpeed;
+                    GetComponent<AudioSource>().Play();
+                    currentBlackBoba--;
+                    totalBoba--;
+                }
             }
-            else if (boba.CompareTag("BlueBoba"))
-            {
-                Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
-                targetPosition.z = 0;
-                Vector3 direction = (targetPosition - transform.position).normalized;
 
-                projectileRB.velocity = direction * 6;
-                GetComponent<AudioSource>().Play();
-                currentBoba--;
+            if (currentBlueBoba > 0)
+            {
+                if (boba.CompareTag("BlueBoba"))
+                {
+                    Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
+                    targetPosition.z = 0;
+                    Vector3 direction = (targetPosition - transform.position).normalized;
+
+                    projectileRB.velocity = direction * 6;
+                    GetComponent<AudioSource>().Play();
+                    currentBlueBoba--;
+                    totalBoba--;
+                }
             }
-            else if (boba.CompareTag("RedBoba"))
+            if (currentRedBoba > 0)
             {
-                Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
-                targetPosition.z = 0;
-                Vector3 direction = (targetPosition - transform.position).normalized;
+                if (boba.CompareTag("RedBoba"))
+                {
+                    Rigidbody2D projectileRB = boba.GetComponent<Rigidbody2D>();
+                    targetPosition.z = 0;
+                    Vector3 direction = (targetPosition - transform.position).normalized;
 
-                projectileRB.velocity = direction * pSpeed;
-                GetComponent<AudioSource>().Play();
-                currentBoba--;
+                    projectileRB.velocity = direction * pSpeed;
+                    GetComponent<AudioSource>().Play();
+                    currentRedBoba--;
+                    totalBoba--;
+                }
             }
         }
-        else
-        {
-            Debug.Log("NO more ammo");
-        }
+
+
 
     }
 
-    public void AddBoba(int bobaAmount)
+    public void AddBoba(int blackBoba, int blueBoba, int redBoba)
     {
-        currentBoba += bobaAmount;
+        currentBlackBoba += blackBoba;
+        currentBlueBoba += blueBoba;
+        currentRedBoba += redBoba;
+
+
+
 
     }
 }

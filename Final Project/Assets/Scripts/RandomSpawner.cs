@@ -96,10 +96,6 @@ public class RandomSpawner : MonoBehaviour
         }
     }
 
-    void newLevel()
-    {
-        DayTracker.Instance.ResetData();
-        levelIndex = DayTracker.Instance.levelIndex;
-    }
+
 
 }

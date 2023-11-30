@@ -61,7 +61,7 @@ public class DayTracker : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene();
         levelIndex = currentLevel.buildIndex;
 
-
+        dayCounter = levelIndex;
 
         dayCount.text = $"Day: {levelIndex} ";
     }

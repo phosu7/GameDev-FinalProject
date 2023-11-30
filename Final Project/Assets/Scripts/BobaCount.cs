@@ -28,11 +28,11 @@ public class BobaCount : MonoBehaviour
 
     public void UpdateBobaCount()
     {
-        if (levelIndex == 1)
+        if (DayTracker.dayCounter == 1)
         {
             bobaCount.text = $"Boba: {boba.currentBoba}";
         }
-        else if (levelIndex == 2)
+        else if (DayTracker.dayCounter == 2)
         {
             bobaCount.text = $"Boba: {boba.currentBoba} \nSnow Boba: 0";
         }

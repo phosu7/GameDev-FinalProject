@@ -40,13 +40,13 @@ public class BobaStraw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (levelIndex == 1)
+        if (DayTracker.dayCounter == 1)
         {
             index = 1;
             SetStraw(index);
         }
 
-        else if (levelIndex == 2)
+        else if (DayTracker.dayCounter == 2)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
@@ -58,7 +58,7 @@ public class BobaStraw : MonoBehaviour
                 index++;
             }
         }
-        else if (levelIndex == 3)
+        else if (DayTracker.dayCounter == 3)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {

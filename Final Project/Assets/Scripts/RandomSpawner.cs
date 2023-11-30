@@ -40,7 +40,7 @@ public class RandomSpawner : MonoBehaviour
 
         IEnumerator SpawnBobaRoutine()
         {
-            if (levelIndex == 1)
+            if (DayTracker.dayCounter == 1)
             {
                 while (true)
                 {
@@ -49,7 +49,7 @@ public class RandomSpawner : MonoBehaviour
 
                 }
             }
-            else if (levelIndex == 2)
+            else if (DayTracker.dayCounter == 2)
             {
                 while (true)
                 {
@@ -69,7 +69,7 @@ public class RandomSpawner : MonoBehaviour
         IEnumerator SpawnKarenRoutine()
         {
 
-            if (levelIndex == 1)
+            if (DayTracker.dayCounter == 1)
             {
                 while ((spawnGoal - 4) >= 0)
                 {
@@ -78,7 +78,7 @@ public class RandomSpawner : MonoBehaviour
                     --spawnGoal;
                 }
             }
-            else if (levelIndex == 2)
+            else if (DayTracker.dayCounter == 2)
             {
                 while ((spawnGoal - 4) >= 0)
                 {

@@ -8,9 +8,13 @@ public class BobaCount : MonoBehaviour
     Text bobaCount;
     public ProjectileThrower boba;
 
+    int levelIndex;
+
     // Start is called before the first frame update
     void Start()
     {
+        levelIndex = DayTracker.Instance.levelIndex;
+
         bobaCount = GetComponent<Text>();
         UpdateBobaCount();
 
@@ -24,6 +28,14 @@ public class BobaCount : MonoBehaviour
 
     public void UpdateBobaCount()
     {
-        bobaCount.text = $"Boba: {boba.currentBoba} ";
+        if (levelIndex == 1)
+        {
+            bobaCount.text = $"Boba: {boba.currentBoba}";
+        }
+        else if (levelIndex == 2)
+        {
+            bobaCount.text = $"Boba: {boba.currentBoba} \nSnow Boba: 0";
+        }
+
     }
 }

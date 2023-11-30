@@ -6,11 +6,16 @@ using UnityEngine;
 public class RandomSpawner : MonoBehaviour
 {
     public EnemyHealth enemyHealth;
-    [SerializeField] GameObject floorBobaPrefab;
-    [SerializeField] GameObject karenPrefab;
+    [SerializeField] GameObject floorBobaPrefab1;
+    [SerializeField] GameObject floorBobaPrefab2;
+    [SerializeField] GameObject floorBobaPrefab3;
+    [SerializeField] GameObject karenPrefab1;
+    [SerializeField] GameObject karenPrefab2;
+    [SerializeField] GameObject karenPrefab3;
 
     // private int karenCount = 11;
     private int spawnGoal = EnemyHealth.goal;
+    int levelIndex;
 
     void Awake()
     {
@@ -20,6 +25,10 @@ public class RandomSpawner : MonoBehaviour
 
     void Start()
     {
+
+        levelIndex = DayTracker.Instance.levelIndex;
+        Debug.Log(levelIndex);
+
         SpawnBoba();
         SpawnKaren();
 
@@ -31,12 +40,22 @@ public class RandomSpawner : MonoBehaviour
 
         IEnumerator SpawnBobaRoutine()
         {
-
-            while (true)
+            if (levelIndex == 1)
             {
-                yield return new WaitForSeconds(2f);
-                GameObject newBoba = Instantiate(floorBobaPrefab, new Vector3(Random.Range(-8, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                while (true)
+                {
+                    yield return new WaitForSeconds(2f);
+                    GameObject newBoba = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(-8, 6), Random.Range(-4, 3), 0), Quaternion.identity);
 
+                }
+            }
+            else if (levelIndex == 2)
+            {
+                while (true)
+                {
+                    yield return new WaitForSeconds(2f);
+                    GameObject newBoba = Instantiate(floorBobaPrefab2, new Vector3(Random.Range(-8, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                }
             }
             yield return null;
         }
@@ -50,11 +69,23 @@ public class RandomSpawner : MonoBehaviour
         IEnumerator SpawnKarenRoutine()
         {
 
-            while ((spawnGoal - 4) >= 0)
+            if (levelIndex == 1)
             {
-                yield return new WaitForSeconds(5f);
-                GameObject newKaren = Instantiate(karenPrefab, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
-                --spawnGoal;
+                while ((spawnGoal - 4) >= 0)
+                {
+                    yield return new WaitForSeconds(5f);
+                    GameObject newKaren = Instantiate(karenPrefab1, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                    --spawnGoal;
+                }
+            }
+            else if (levelIndex == 2)
+            {
+                while ((spawnGoal - 4) >= 0)
+                {
+                    yield return new WaitForSeconds(5f);
+                    GameObject newKaren = Instantiate(karenPrefab2, new Vector3(Random.Range(-9, 6), Random.Range(-4, 3), 0), Quaternion.identity);
+                    --spawnGoal;
+                }
             }
 
 

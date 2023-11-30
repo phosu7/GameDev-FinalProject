@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 214388255315916553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.86, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 1}
+  m_LocalPosition: {x: -0.01, y: 0.072, z: 0}
+  m_LocalScale: {x: 0.029003136, y: 0.07894783, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2631371883586102731}
@@ -100,10 +100,10 @@ GameObject:
   - component: {fileID: 9109658221963374702}
   - component: {fileID: 579356376239040916}
   - component: {fileID: 7091072558875460687}
-  - component: {fileID: 5680905459261548653}
   - component: {fileID: -661938706718367363}
   - component: {fileID: 2035233936383425746}
   - component: {fileID: 5184550411689528426}
+  - component: {fileID: 2925140822078139957}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -121,7 +121,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.22, y: -1.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.6334405, y: 7.0171585, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7727230781130303627}
@@ -167,8 +167,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 87af64ef361830940ba4f384e5ee290e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -366,41 +366,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
---- !u!58 &5680905459261548653
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6986938282813580304}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &-661938706718367363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +492,41 @@ MonoBehaviour:
   bobaPrefab1: {fileID: 7650344606134399227, guid: 8a7bd7d174ed3984a8eb75c7a7beb8f2, type: 3}
   bobaPrefab2: {fileID: 1035272012789515264, guid: 7b2d2f5199092284b9a3ec5a51451474, type: 3}
   bobaPrefab3: {fileID: 5008456597757203243, guid: f76badddfa9329044b9886a3345de173, type: 3}
+--- !u!58 &2925140822078139957
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986938282813580304}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.075
 --- !u!1 &7198404093959233568
 GameObject:
   m_ObjectHideFlags: 0

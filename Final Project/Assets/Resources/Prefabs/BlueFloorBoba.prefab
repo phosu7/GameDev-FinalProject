@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &965267673933025056
+--- !u!1 &186469075937317248
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6251378133100991322}
-  - component: {fileID: 6011478612126437808}
-  - component: {fileID: 652575308688016201}
-  - component: {fileID: 5358258144877765208}
-  - component: {fileID: 6663687465056351341}
+  - component: {fileID: 780818631222385087}
+  - component: {fileID: 5577266087637217032}
+  - component: {fileID: 4156061904986055523}
+  - component: {fileID: 1823363788767970618}
+  - component: {fileID: 6795817232553776725}
   m_Layer: 0
-  m_Name: FloorBoba
+  m_Name: BlueFloorBoba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6251378133100991322
+--- !u!4 &780818631222385087
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965267673933025056}
+  m_GameObject: {fileID: 186469075937317248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.822, y: -3.846, z: 0}
-  m_LocalScale: {x: 0.974645, y: 1.0251229, z: 1}
+  m_LocalPosition: {x: -11.598, y: -2.569, z: 0}
+  m_LocalScale: {x: 0.90080017, y: 0.90860194, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6011478612126437808
+--- !u!212 &5577266087637217032
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965267673933025056}
+  m_GameObject: {fileID: 186469075937317248}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a228b1dc0179ae48bb0c06325595b6b, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: fc2d89de464de074885afc34372168ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,40 +87,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &652575308688016201
+--- !u!114 &4156061904986055523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965267673933025056}
+  m_GameObject: {fileID: 186469075937317248}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af679728e5222b34a88055363b6b94af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: {fileID: 8300000, guid: 5541dd698a239ff489f9db403264b9b1, type: 3}
---- !u!82 &5358258144877765208
+--- !u!82 &1823363788767970618
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965267673933025056}
+  m_GameObject: {fileID: 186469075937317248}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5134810693303854644, guid: b934a735cf6d54c4abe71f448c9856b3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5541dd698a239ff489f9db403264b9b1, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 154
+  Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.49790955
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -196,13 +196,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!58 &6663687465056351341
+--- !u!58 &6795817232553776725
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965267673933025056}
+  m_GameObject: {fileID: 186469075937317248}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

@@ -26,6 +26,6 @@ public class KarenCount : MonoBehaviour
     public void UpdateKarenDeaths()
     {
         // int currentScore = EnemyHealth.instance.GetScore();
-        karenCount.text = $"Karens: {EnemyHealth.count}/{EnemyHealth.goal} ";
+        karenCount.text = $"Karens: {EnemyHealth.count}/{EnemyHealth.goal}  ";
     }
 }

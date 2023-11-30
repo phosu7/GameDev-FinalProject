@@ -21,14 +21,16 @@ public class enemyScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         //playerHealth = GetComponent<PlayerHealth>();
-        if (this.tag == "RedKaren")
-        {
-            moveSpeed = 4f;
-        }
-
         if (this.tag == "BlueKaren")
         {
+            moveSpeed = 4f;
+            enemyHealth.maxHealth = 6;
+        }
+
+        if (this.tag == "RedKaren")
+        {
             moveSpeed = 0.75f;
+            enemyHealth.maxHealth = 16;
         }
 
     }
@@ -67,6 +69,7 @@ public class enemyScript : MonoBehaviour
     {
         PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
+
         if (other.tag == "Boba")
         {
             enemyHealth.TakeDamage(1f);
@@ -91,11 +94,11 @@ public class enemyScript : MonoBehaviour
         }
         else if (other.tag == "Player" && this.tag == "BlueKaren")
         {
-            playerHealth.TakeDamage(2f);
+            playerHealth.TakeDamage(0.5f);
         }
         else if (other.tag == "Player" && this.tag == "RedKaren")
         {
-            playerHealth.TakeDamage(0.5f);
+            playerHealth.TakeDamage(2f);
         }
 
 

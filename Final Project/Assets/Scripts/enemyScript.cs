@@ -29,7 +29,7 @@ public class enemyScript : MonoBehaviour
 
         if (this.tag == "RedKaren")
         {
-            moveSpeed = 0.75f;
+            moveSpeed = 1f;
             enemyHealth.maxHealth = 16;
         }
 

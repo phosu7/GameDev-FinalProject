@@ -10,14 +10,20 @@ public class ProjectileThrower : MonoBehaviour
     public Transform firePoint;
 
     //ammo
-    public static int currentBlackBoba = 0;
-    public static int currentBlueBoba = 0;
-    public static int currentRedBoba = 0;
+    public static int currentBlackBoba;
+    public static int currentBlueBoba;
+    public static int currentRedBoba;
 
     public int totalBoba = 0;
 
     public int ammoSize = 5;
 
+    void Start()
+    {
+        currentBlackBoba = 0;
+        currentBlueBoba = 0;
+        currentRedBoba = 0;
+    }
     void Update()
     {
         totalBoba = currentBlackBoba + currentBlueBoba + currentRedBoba;
@@ -95,4 +101,6 @@ public class ProjectileThrower : MonoBehaviour
 
 
     }
+
+
 }

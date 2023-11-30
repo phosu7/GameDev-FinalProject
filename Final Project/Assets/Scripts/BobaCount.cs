@@ -36,6 +36,10 @@ public class BobaCount : MonoBehaviour
         {
             bobaCount.text = $"Boba: {ProjectileThrower.currentBlackBoba} \nSnow Boba: {ProjectileThrower.currentBlueBoba}";
         }
+        else if (DayTracker.dayCounter == 3)
+        {
+            bobaCount.text = $"Boba: {ProjectileThrower.currentBlackBoba} \nFire Boba: {ProjectileThrower.currentRedBoba}";
+        }
 
     }
 }

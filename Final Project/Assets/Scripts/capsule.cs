@@ -14,6 +14,7 @@ public class capsule : MonoBehaviour
         //Display Victory
         if (other.tag == "Player")
         {
+            EnemyHealth.count = 0;
             OnVictory?.Invoke();
         }
     }

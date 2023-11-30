@@ -51,7 +51,6 @@ public class ProjectileThrower : MonoBehaviour
                     totalBoba--;
                 }
             }
-
             if (currentBlueBoba > 0)
             {
                 if (boba.CompareTag("BlueBoba"))

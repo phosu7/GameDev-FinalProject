@@ -20,7 +20,7 @@ public class enemyScript : MonoBehaviour
         //enemyHealth = GetComponent<EnemyHealth>();
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
-        //playerHealth = GetComponent<PlayerHealth>();
+        PlayerHealth playerHealth = GetComponent<PlayerHealth>();
         if (this.tag == "BlueKaren")
         {
             moveSpeed = 4f;
@@ -67,6 +67,7 @@ public class enemyScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+
         PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
 
@@ -100,6 +101,8 @@ public class enemyScript : MonoBehaviour
         {
             playerHealth.TakeDamage(2f);
         }
+
+
 
 
     }

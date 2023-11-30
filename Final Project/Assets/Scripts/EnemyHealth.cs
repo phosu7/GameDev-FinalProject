@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
 
 
     public static int count = 0;
-    public static int goal = 11;
+    public static int goal = 10;
 
     //singleton: can delete
     //public static EnemyHealth instance;
@@ -89,7 +89,7 @@ public class EnemyHealth : MonoBehaviour
         {
             count++;
             // score++;
-            Debug.Log(count);
+            //Debug.Log(count);
             if (count == goal)
             {
                 Debug.Log("PLANK");

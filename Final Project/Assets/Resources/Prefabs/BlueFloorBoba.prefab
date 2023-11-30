@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6795817232553776725}
   m_Layer: 0
   m_Name: BlueFloorBoba
-  m_TagString: BlueBoba
+  m_TagString: FloorBlueBoba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

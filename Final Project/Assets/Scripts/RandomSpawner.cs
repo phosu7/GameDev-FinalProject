@@ -15,7 +15,9 @@ public class RandomSpawner : MonoBehaviour
 
     // private int karenCount = 11;
     private int spawnGoal = EnemyHealth.goal;
+    private int karenCount = 0;
     int levelIndex;
+
 
     void Awake()
     {
@@ -53,15 +55,15 @@ public class RandomSpawner : MonoBehaviour
             {
                 while (true)
                 {
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(1f);
                     GameObject newBoba = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(-9.5f, -2.5f), Random.Range(-4.5f, 3.5f), 0), Quaternion.identity);
                     yield return new WaitForSeconds(2.5f);
-                    GameObject newBoba1 = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(-2.6f, -0.4f), Random.Range(-4.5f, 0.7f), 0), Quaternion.identity);
-                    yield return new WaitForSeconds(3f);
+                    GameObject newBoba1 = Instantiate(floorBobaPrefab2, new Vector3(Random.Range(-2.6f, -0.4f), Random.Range(-4.5f, 0.7f), 0), Quaternion.identity);
+
                     GameObject newBoba2 = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(1.25f, 7.5f), Random.Range(-4.5f, 4.6f), 0), Quaternion.identity);
 
                     yield return new WaitForSeconds(1f);
-                    GameObject newBoba3 = Instantiate(floorBobaPrefab2, new Vector3(Random.Range(-9, 9), Random.Range(-4.5f, 0.5f), 0), Quaternion.identity);
+                    GameObject newBoba3 = Instantiate(floorBobaPrefab1, new Vector3(Random.Range(-9, 9), Random.Range(-4.5f, 0.5f), 0), Quaternion.identity);
 
 
                 }
@@ -84,18 +86,31 @@ public class RandomSpawner : MonoBehaviour
                 {
                     yield return new WaitForSeconds(5f);
                     GameObject newKaren = Instantiate(karenPrefab1, new Vector3(Random.Range(6.8f, 9.5f), Random.Range(-4.5f, 0.85f), 0), Quaternion.identity);
+
                     --spawnGoal;
                 }
             }
             else if (DayTracker.dayCounter == 2)
             {
-                while ((spawnGoal - 4) >= 0)
+                while (karenCount <= EnemyHealth.goal)
                 {
-                    yield return new WaitForSeconds(3f);
-                    GameObject newKaren1 = Instantiate(karenPrefab1, new Vector3(Random.Range(6.8f, 9.5f), Random.Range(-4.5f, 0.85f), 0), Quaternion.identity);
-                    yield return new WaitForSeconds(9f);
-                    GameObject newKaren2 = Instantiate(karenPrefab2, new Vector3(Random.Range(6.8f, 9.5f), Random.Range(-4.5f, 0.85f), 0), Quaternion.identity);
+                    yield return new WaitForSeconds(2f);
+                    GameObject newKaren = Instantiate(karenPrefab1, new Vector3(Random.Range(-10.9f, -10.4f), Random.Range(-4.7f, 3.15f), 0), Quaternion.identity);
 
+                    yield return new WaitForSeconds(4f);
+                    GameObject newKaren1 = Instantiate(karenPrefab2, new Vector3(Random.Range(-10.9f, -10.4f), Random.Range(-4.7f, 3.15f), 0), Quaternion.identity);
+
+                    yield return new WaitForSeconds(3f);
+                    GameObject newKaren6 = Instantiate(karenPrefab1, new Vector3(Random.Range(10.5f, 11), Random.Range(-4.9f, .75f), 0), Quaternion.identity);
+
+                    yield return new WaitForSeconds(3f);
+                    GameObject newKaren2 = Instantiate(karenPrefab2, new Vector3(Random.Range(-10.25f, 10.5f), Random.Range(-6.5f, -4.75f), 0), Quaternion.identity);
+
+                    yield return new WaitForSeconds(4f);
+                    GameObject newKaren3 = Instantiate(karenPrefab1, new Vector3(Random.Range(-10.25f, 10.5f), Random.Range(-6.5f, -4.75f), 0), Quaternion.identity);
+
+
+                    karenCount += 5;
                     --spawnGoal;
                 }
             }

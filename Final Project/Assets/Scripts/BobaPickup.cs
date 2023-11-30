@@ -14,26 +14,25 @@ public class BobaPickup : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(ammo);
 
-
-
             //AudioSource.PlayClipAtPoint(ammo, transform.position);
-            if (this.tag == "Boba")
+            if (this.tag == "FloorBoba")
             {
                 projectileThrower.AddBoba(projectileThrower.ammoSize, 0, 0);
             }
 
-            if (this.tag == "BlueBoba")
+            if (this.tag == "FloorBlueBoba")
             {
                 projectileThrower.AddBoba(0, 2, 0);
             }
 
-            if (this.tag == "RedBoba")
+            if (this.tag == "FloorRedBoba")
             {
                 projectileThrower.AddBoba(0, 0, 1);
             }
             // projectileThrower.AddBoba(projectileThrower.ammoSize, 0, 0);
             Debug.Log("i picked up boba");
-            Destroy(gameObject);
+            if (other.tag != "Boba" || other.tag != "BlueBoba" || other.tag != "RedBoba")
+                Destroy(gameObject);
         }
 
     }

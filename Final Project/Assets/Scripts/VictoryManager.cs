@@ -29,4 +29,10 @@ public class VictoryManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
 
     }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Day2", LoadSceneMode.Single);
+        DayTracker.Instance.ResetData();
+    }
 }

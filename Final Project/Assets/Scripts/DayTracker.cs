@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using JetBrains.Annotations;
-using UnityEditor.PackageManager;
+//using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +14,9 @@ public class DayTracker : MonoBehaviour
     //getting sceneIndex and updating it
     Scene currentLevel;
     // string sceneName;
+    public int levelIndex;
+
+    public static int dayCounter;
 
     //singleton
     private static DayTracker _instance;
@@ -36,7 +39,7 @@ public class DayTracker : MonoBehaviour
         }
     }
 
-    public int levelIndex;
+
     /*void Awake()
     {
         if (instance == null)
@@ -58,12 +61,16 @@ public class DayTracker : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene();
         levelIndex = currentLevel.buildIndex;
 
+
+
         dayCount.text = $"Day: {levelIndex} ";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetData()
     {
+        currentLevel = SceneManager.GetActiveScene();
+        levelIndex = currentLevel.buildIndex;
 
     }
+
 }

@@ -276,7 +276,7 @@ PrefabInstance:
     - target: {fileID: 4208053921202949539, guid: 7e1ca6f9a0da480408d724aa01794a55, type: 3}
       propertyPath: floorBobaPrefab1
       value: 
-      objectReference: {fileID: 6895162564210400077, guid: ced65ac6cbad5c444804fa33f45a131b, type: 3}
+      objectReference: {fileID: 965267673933025056, guid: 7a91222fd613ce1408bb651845ac44a5, type: 3}
     - target: {fileID: 4208053921202949539, guid: 7e1ca6f9a0da480408d724aa01794a55, type: 3}
       propertyPath: floorBobaPrefab2
       value: 

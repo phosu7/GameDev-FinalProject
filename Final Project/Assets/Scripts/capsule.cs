@@ -2,10 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
+using UnityEngine.Rendering;
 
 public class capsule : MonoBehaviour
 {
     public static event Action OnVictory;
+
+
+
+    void Start()
+    {
+
+
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,9 +24,12 @@ public class capsule : MonoBehaviour
         //Display Victory
         if (other.tag == "Player")
         {
-            EnemyHealth.count = 0;
+
             OnVictory?.Invoke();
+            EnemyHealth.count = 0;
         }
     }
+
+
 
 }

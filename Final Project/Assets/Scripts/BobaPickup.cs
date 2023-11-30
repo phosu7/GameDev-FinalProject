@@ -17,7 +17,7 @@ public class BobaPickup : MonoBehaviour
             //AudioSource.PlayClipAtPoint(ammo, transform.position);
             if (this.tag == "FloorBoba")
             {
-                projectileThrower.AddBoba(projectileThrower.ammoSize, 0, 0);
+                projectileThrower.AddBoba(5, 0, 0);
             }
 
             if (this.tag == "FloorBlueBoba")
@@ -33,7 +33,7 @@ public class BobaPickup : MonoBehaviour
             //Debug.Log("i picked up boba");
             if (other.tag == "Player")
             {
-                Debug.Log("collided with boba!");
+
                 Destroy(gameObject);
 
             }

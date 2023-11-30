@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: -661938706718367363}
   - component: {fileID: 2035233936383425746}
   - component: {fileID: 5184550411689528426}
-  - component: {fileID: 6411024523742829802}
+  - component: {fileID: 9114363562111606146}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -492,7 +492,7 @@ MonoBehaviour:
   bobaPrefab1: {fileID: 7650344606134399227, guid: 8a7bd7d174ed3984a8eb75c7a7beb8f2, type: 3}
   bobaPrefab2: {fileID: 1035272012789515264, guid: 7b2d2f5199092284b9a3ec5a51451474, type: 3}
   bobaPrefab3: {fileID: 5008456597757203243, guid: f76badddfa9329044b9886a3345de173, type: 3}
---- !u!58 &6411024523742829802
+--- !u!58 &9114363562111606146
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -15,6 +15,7 @@ TagManager:
   - FloorBoba
   - FloorBlueBoba
   - FloorRedBoba
+  - Capsule
   layers:
   - Default
   - TransparentFX

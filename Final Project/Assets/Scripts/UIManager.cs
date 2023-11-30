@@ -25,8 +25,9 @@ public class UIManager : MonoBehaviour
 
     public void MainMenu()
     {
-        EnemyHealth.count = 0;
+
         SceneManager.LoadScene("MainMenu");
+        //EnemyHealth.count = 0;
 
     }
 

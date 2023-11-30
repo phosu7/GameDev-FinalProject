@@ -46,11 +46,12 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Damage");
         if (currentHealth <= 0)
         {
-            EnemyHealth.count = 0;
+
             Destroy(this.gameObject);
 
             //Display GameOver
             OnPlayerDeath?.Invoke();
+            EnemyHealth.count = 0;
 
 
         }

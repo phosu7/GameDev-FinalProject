@@ -82,7 +82,7 @@ public class BobaStraw : MonoBehaviour
             if (bobaStrawSR.color == (Color.black) && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentRedBoba > 0)
             {
                 //Debug.Log("THis should be called 1");
-                projectileThrower.SetPrefab(bobaPrefab2);
+                projectileThrower.SetPrefab(bobaPrefab3);
                 ChangeStraw(Color.red);
             }
             if (bobaStrawSR.color == (Color.red) && ProjectileThrower.currentRedBoba <= 0 && ProjectileThrower.currentBlackBoba > 0)
@@ -100,12 +100,69 @@ public class BobaStraw : MonoBehaviour
         }
         else
         {
+            if (index >= 4)
+            {
+                index = 1;
+            }
+            if (bobaStrawSR.color == (Color.black) && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentBlueBoba <= 0 && ProjectileThrower.currentRedBoba > 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab3);
+                ChangeStraw(Color.red);
+            }
+            else if (bobaStrawSR.color == (Color.black) && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentBlueBoba > 0 && ProjectileThrower.currentRedBoba <= 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab2);
+                ChangeStraw(Color.blue);
+            }
+            else if (bobaStrawSR.color == (Color.black) && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentBlueBoba > 0 && ProjectileThrower.currentRedBoba > 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab2);
+                ChangeStraw(Color.blue);
+            }
+
+            if (bobaStrawSR.color == (Color.blue) && ProjectileThrower.currentBlueBoba <= 0 && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentRedBoba > 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab3);
+                ChangeStraw(Color.red);
+            }
+            else if (bobaStrawSR.color == (Color.blue) && ProjectileThrower.currentBlueBoba <= 0 && ProjectileThrower.currentBlackBoba > 0 && ProjectileThrower.currentRedBoba <= 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab1);
+                ChangeStraw(Color.black);
+            }
+            else if (bobaStrawSR.color == (Color.blue) && ProjectileThrower.currentBlueBoba <= 0 && ProjectileThrower.currentBlackBoba > 0 && ProjectileThrower.currentRedBoba > 0)
+            {
+                //Debug.Log("THis should be called 1");
+                projectileThrower.SetPrefab(bobaPrefab1);
+                ChangeStraw(Color.black);
+            }
+
+            if (bobaStrawSR.color == (Color.red) && ProjectileThrower.currentRedBoba <= 0 && ProjectileThrower.currentBlackBoba > 0 && ProjectileThrower.currentBlueBoba <= 0)
+            {
+                //Debug.Log("THis should be called 2");
+                projectileThrower.SetPrefab(bobaPrefab1);
+                ChangeStraw(Color.black);
+            }
+            else if (bobaStrawSR.color == (Color.red) && ProjectileThrower.currentRedBoba <= 0 && ProjectileThrower.currentBlackBoba <= 0 && ProjectileThrower.currentBlueBoba > 0)
+            {
+                //Debug.Log("THis should be called 2");
+                projectileThrower.SetPrefab(bobaPrefab2);
+                ChangeStraw(Color.blue);
+            }
+            else if (bobaStrawSR.color == (Color.red) && ProjectileThrower.currentRedBoba <= 0 && ProjectileThrower.currentBlackBoba > 0 && ProjectileThrower.currentBlueBoba > 0)
+            {
+                //Debug.Log("THis should be called 2");
+                projectileThrower.SetPrefab(bobaPrefab1);
+                ChangeStraw(Color.black);
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                if (index >= 4)
-                {
-                    index = 1;
-                }
                 SetStraw(index);
                 index++;
             }
